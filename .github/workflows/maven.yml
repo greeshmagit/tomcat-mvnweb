@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Java CI with Maven
+name: Tomcat web deploy
 
 on:
   push:
@@ -24,3 +24,5 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: tomcat deploy
+      run: curl -v -u admin:tomcat -T C:\Users\prabh\.m2\repository\com\greeshma\tomcat-mvnweb\1.0-SNAPSHOT\tomcat-mvnweb-1.0-SNAPSHOT.war 'http://ec2-50-19-134-123.compute-1.amazonaws.com:8080//manager/text/deploy?path=tomcat-mvnweb'
