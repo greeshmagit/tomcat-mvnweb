@@ -25,7 +25,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: tomcat deploy
-      run: curl -v -u admin:tomcat -T C:\Users\prabh\OneDrive\Desktop\gre\devops\git\git-repository\tomcat-mvnweb\target\tomcat-mvnweb.war "http://ec2-54-196-175-45.compute-1.amazonaws.com:8080//manager/text/deploy?path=tomcat-mvnweb"
+      run: curl -u admin:tomcat "http://ec2-54-196-175-45.compute-1.amazonaws.com:8080//manager/text/deploy?path=tomcat-mvnweb"
      
       
       
