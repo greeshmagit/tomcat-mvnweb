@@ -17,8 +17,8 @@
   </dependencies>
 
 
-  <build>
-	<plugins>
+   <build>
+	   <!--	<plugins>
       <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-project-info-reports-plugin</artifactId>
@@ -46,7 +46,7 @@
               <version>3.7.1</version>
         </plugin>
         
-    	  </plugins>
+	   </plugins>-->
 
     <finalName>tomcat-mvnweb</finalName>
   </build>
