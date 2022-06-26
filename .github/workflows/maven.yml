@@ -24,6 +24,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: tomcat deploy
+      run: curl -v -u admin:tomcat -T /tomcat-mvnweb/target/tomcat-mvnweb.war "http://ec2-54-196-175-45.compute-1.amazonaws.com:8080//manager/text/deploy?path=tomcat-mvnweb"
     
      
       
